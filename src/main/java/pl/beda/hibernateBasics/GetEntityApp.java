@@ -6,42 +6,39 @@ import org.hibernate.cfg.Configuration;
 
 import pl.beda.hibernateBasics.entity.Employee;
 
-/**
- * Created by Marcin Beda.
- */
 
 public class GetEntityApp {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		Configuration conf = new Configuration();
-		conf.configure("hibernate.cfg.xml");
-		conf.addAnnotatedClass(Employee.class);
-		SessionFactory factory = conf.buildSessionFactory();
+        Configuration conf = new Configuration();
+        conf.configure("hibernate.cfg.xml");
+        conf.addAnnotatedClass(Employee.class);
+        SessionFactory factory = conf.buildSessionFactory();
 
-		Session session = factory.getCurrentSession();
+        Session session = factory.getCurrentSession();
 
-		Employee employee = new Employee();
-		employee.setFirstName("Tadeusz");
-		employee.setLastName("Wisniewski");
-		employee.setSalary(10000);
+        Employee employee = new Employee();
+        employee.setFirstName("Tadeusz");
+        employee.setLastName("Wisniewski");
+        employee.setSalary(10000);
 
-		session.beginTransaction();
+        session.beginTransaction();
 
-		Integer id = (Integer) session.save(employee);
+        Integer id = (Integer) session.save(employee);
 
-		session.getTransaction().commit();
+        session.getTransaction().commit();
 
-		session = factory.getCurrentSession();
+        session = factory.getCurrentSession();
 
-		session.beginTransaction();
+        session.beginTransaction();
 
-		Employee retrievedEmployee = session.get(Employee.class, id);
+        Employee retrievedEmployee = session.get(Employee.class, id);
 
-		session.getTransaction().commit();
-		
-		System.out.println("Dane pracownika: " + retrievedEmployee);
+        session.getTransaction().commit();
 
-		factory.close();
-	}
+        System.out.println("Dane pracownika: " + retrievedEmployee);
+
+        factory.close();
+    }
 }

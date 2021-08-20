@@ -9,9 +9,6 @@ import org.hibernate.query.Query;
 
 import pl.beda.hibernateHQL.entity.Employee;
 
-/**
- * Created by Marcin Beda.
- */
 
 public class FromApp {
 

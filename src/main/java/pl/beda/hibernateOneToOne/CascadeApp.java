@@ -7,16 +7,13 @@ import org.hibernate.cfg.Configuration;
 import pl.beda.hibernateOneToOne.entity.Company;
 import pl.beda.hibernateOneToOne.entity.CompanyDetail;
 
-/**
- * Created by Marcin Beda.
- */
 
 public class CascadeApp {
 
     public static void main(String[] args) {
 
-		Configuration conf = new Configuration();
-		conf.configure("hibernate.cfg.xml");
+        Configuration conf = new Configuration();
+        conf.configure("hibernate.cfg.xml");
         conf.addAnnotatedClass(Company.class);
         conf.addAnnotatedClass(CompanyDetail.class);
         SessionFactory factory = conf.buildSessionFactory();

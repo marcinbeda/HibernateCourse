@@ -9,9 +9,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-/**
- * Created by Marcin Beda.
- */
 
 @Entity
 @Table(name = "company_detail")

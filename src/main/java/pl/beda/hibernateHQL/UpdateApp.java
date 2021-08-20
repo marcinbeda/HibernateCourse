@@ -9,16 +9,13 @@ import org.hibernate.query.Query;
 
 import pl.beda.hibernateHQL.entity.Employee;
 
-/**
- * Created by Marcin Beda.
- */
 
 public class UpdateApp {
 
     public static void main(String[] args) {
 
-		Configuration conf = new Configuration();
-		conf.configure("hibernate.cfg.xml");
+        Configuration conf = new Configuration();
+        conf.configure("hibernate.cfg.xml");
         conf.addAnnotatedClass(Employee.class);
         SessionFactory factory = conf.buildSessionFactory();
 

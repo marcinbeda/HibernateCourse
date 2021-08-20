@@ -10,9 +10,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-/**
- * Created by Marcin Beda.
- */
 
 @Entity
 @Table(name = "property")

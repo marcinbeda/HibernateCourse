@@ -10,10 +10,6 @@ import org.hibernate.cfg.Configuration;
 
 import pl.beda.hibernateManyToMany.entity.*;
 
-/**
- * Created by Marcin Beda.
- */
-
 public class ManyToManyDeleteApp {
 
     public static void main(String[] args) {

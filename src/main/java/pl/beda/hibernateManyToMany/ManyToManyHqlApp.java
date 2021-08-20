@@ -9,9 +9,6 @@ import org.hibernate.query.Query;
 
 import pl.beda.hibernateManyToMany.entity.*;
 
-/**
- * Created by Marcin Beda.
- */
 
 public class ManyToManyHqlApp {
 

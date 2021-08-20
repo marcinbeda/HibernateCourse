@@ -7,9 +7,6 @@ import org.hibernate.cfg.Configuration;
 import pl.beda.hibernateOneToOne.entity.Company;
 import pl.beda.hibernateOneToOne.entity.CompanyDetail;
 
-/**
- * Created by Marcin Beda.
- */
 
 public class CascadeRemoveApp {
 

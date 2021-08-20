@@ -8,31 +8,28 @@ import org.hibernate.cfg.Configuration;
 
 import pl.beda.hibernateBasics.entity.Employee;
 
-/**
- * Created by Marcin Beda.
- */
 
 public class GetAllEntitiesApp {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		Configuration conf = new Configuration();
-		conf.configure("hibernate.cfg.xml");
-		conf.addAnnotatedClass(Employee.class);
-		SessionFactory factory = conf.buildSessionFactory();
+        Configuration conf = new Configuration();
+        conf.configure("hibernate.cfg.xml");
+        conf.addAnnotatedClass(Employee.class);
+        SessionFactory factory = conf.buildSessionFactory();
 
-		Session session = factory.getCurrentSession();
+        Session session = factory.getCurrentSession();
 
-		session.beginTransaction();
+        session.beginTransaction();
 
-		List<Employee> resultList = session.createQuery("from Employee").getResultList();
-		
-		for(Employee employee : resultList) {
-			System.out.println(employee);
-		}
+        List<Employee> resultList = session.createQuery("from Employee").getResultList();
 
-		session.getTransaction().commit();
+        for (Employee employee : resultList) {
+            System.out.println(employee);
+        }
 
-		factory.close();
-	}
+        session.getTransaction().commit();
+
+        factory.close();
+    }
 }

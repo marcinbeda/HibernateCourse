@@ -10,9 +10,6 @@ import pl.beda.hibernateOneToManyOneWay.entity.CompanyDetail;
 import pl.beda.hibernateOneToManyOneWay.entity.Department;
 import pl.beda.hibernateOneToManyOneWay.entity.Property;
 
-/**
- * Created by Marcin Beda.
- */
 
 public class OneToManyUniSaveApp {
 

@@ -9,16 +9,13 @@ import org.hibernate.query.Query;
 
 import pl.beda.hibernateOneToMany.entity.*;
 
-/**
- * Created by Marcin Beda.
- */
 
 public class OneToManyHqlApp {
 
     public static void main(String[] args) {
 
-		Configuration conf = new Configuration();
-		conf.configure("hibernate.cfg.xml");
+        Configuration conf = new Configuration();
+        conf.configure("hibernate.cfg.xml");
         conf.addAnnotatedClass(Company.class);
         conf.addAnnotatedClass(CompanyDetail.class);
         conf.addAnnotatedClass(Property.class);

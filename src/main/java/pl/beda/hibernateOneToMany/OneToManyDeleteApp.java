@@ -9,9 +9,6 @@ import pl.beda.hibernateOneToMany.entity.Company;
 import pl.beda.hibernateOneToMany.entity.CompanyDetail;
 import pl.beda.hibernateOneToMany.entity.Property;
 
-/**
- * Created by Marcin Beda.
- */
 
 public class OneToManyDeleteApp {
 

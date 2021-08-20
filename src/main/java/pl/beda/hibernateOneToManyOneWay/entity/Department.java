@@ -7,9 +7,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- * Created by Marcin Beda.
- */
 
 @Entity
 @Table(name = "department")

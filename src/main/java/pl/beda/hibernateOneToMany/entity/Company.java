@@ -16,9 +16,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-/**
- * Created by Marcin Beda.
- */
 
 @Entity
 @Table(name = "company")

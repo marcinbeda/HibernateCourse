@@ -10,9 +10,6 @@ import org.hibernate.cfg.Configuration;
 
 import pl.beda.hibernateManyToMany.entity.*;
 
-/**
- * Created by Marcin Beda.
- */
 
 public class ManyToManyGetApp {
 

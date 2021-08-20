@@ -7,9 +7,6 @@ import pl.beda.hibernateFetchTypes.entity.Company;
 import pl.beda.hibernateFetchTypes.entity.CompanyDetail;
 import pl.beda.hibernateFetchTypes.entity.Property;
 
-/**
- * Created by Marcin Beda.
- */
 
 public class FetchTypeApp {
 

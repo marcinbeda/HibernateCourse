@@ -6,9 +6,6 @@ import org.hibernate.cfg.Configuration;
 
 import pl.beda.hibernateBasics.entity.Employee;
 
-/**
- * Created by Marcin Beda.
- */
 
 public class UpdateDetachedEntityApp {
 

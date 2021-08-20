@@ -6,33 +6,30 @@ import org.hibernate.cfg.Configuration;
 
 import pl.beda.hibernateBasics.entity.Employee;
 
-/**
- * Created by Marcin Beda.
- */
 
 public class SaveEntityApp {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		Configuration conf = new Configuration();
-		conf.configure("hibernate.cfg.xml");
-		conf.addAnnotatedClass(Employee.class);
-		SessionFactory factory = conf.buildSessionFactory();
+        Configuration conf = new Configuration();
+        conf.configure("hibernate.cfg.xml");
+        conf.addAnnotatedClass(Employee.class);
+        SessionFactory factory = conf.buildSessionFactory();
 
-		Session session = factory.getCurrentSession();
+        Session session = factory.getCurrentSession();
 
-		Employee employee = new Employee();
-		employee.setIdEmployee(1);
-		employee.setFirstName("Jan");
-		employee.setLastName("Kowalski");
-		employee.setSalary(10000);
+        Employee employee = new Employee();
+        employee.setIdEmployee(1);
+        employee.setFirstName("Jan");
+        employee.setLastName("Kowalski");
+        employee.setSalary(10000);
 
-		session.beginTransaction();
+        session.beginTransaction();
 
-		session.save(employee);
+        session.save(employee);
 
-		session.getTransaction().commit();
+        session.getTransaction().commit();
 
-		factory.close();
-	}
+        factory.close();
+    }
 }

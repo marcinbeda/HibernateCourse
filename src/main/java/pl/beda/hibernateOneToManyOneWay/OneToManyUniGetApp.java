@@ -11,16 +11,13 @@ import pl.beda.hibernateOneToManyOneWay.entity.CompanyDetail;
 import pl.beda.hibernateOneToManyOneWay.entity.Department;
 import pl.beda.hibernateOneToManyOneWay.entity.Property;
 
-/**
- * Created by Marcin Beda.
- */
 
 public class OneToManyUniGetApp {
 
     public static void main(String[] args) {
 
-		Configuration conf = new Configuration();
-		conf.configure("hibernate.cfg.xml");
+        Configuration conf = new Configuration();
+        conf.configure("hibernate.cfg.xml");
         conf.addAnnotatedClass(Company.class);
         conf.addAnnotatedClass(CompanyDetail.class);
         conf.addAnnotatedClass(Property.class);

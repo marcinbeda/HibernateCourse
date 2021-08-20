@@ -6,44 +6,41 @@ import org.hibernate.cfg.Configuration;
 
 import pl.beda.hibernateBasics.entity.Employee;
 
-/**
- * Created by Marcin Beda.
- */
 
 public class PrimaryKeyApp {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		Configuration conf = new Configuration();
-		conf.configure("hibernate.cfg.xml");
-		conf.addAnnotatedClass(Employee.class);
-		SessionFactory factory = conf.buildSessionFactory();
+        Configuration conf = new Configuration();
+        conf.configure("hibernate.cfg.xml");
+        conf.addAnnotatedClass(Employee.class);
+        SessionFactory factory = conf.buildSessionFactory();
 
-		Session session = factory.getCurrentSession();
+        Session session = factory.getCurrentSession();
 
-		Employee employee = new Employee();
-		employee.setFirstName("Krzysztof");
-		employee.setLastName("Nowak");
-		employee.setSalary(10000);
-		
-		Employee employee2 = new Employee();
-		employee2.setFirstName("Janina");
-		employee2.setLastName("Kowalska");
-		employee2.setSalary(10000);
-		
-		Employee employee3 = new Employee();
-		employee3.setFirstName("Andrzej");
-		employee3.setLastName("Sienkiewicz");
-		employee3.setSalary(10000);
+        Employee employee = new Employee();
+        employee.setFirstName("Krzysztof");
+        employee.setLastName("Nowak");
+        employee.setSalary(10000);
 
-		session.beginTransaction();
+        Employee employee2 = new Employee();
+        employee2.setFirstName("Janina");
+        employee2.setLastName("Kowalska");
+        employee2.setSalary(10000);
 
-		session.save(employee);
-		session.save(employee2);
-		session.save(employee3);
+        Employee employee3 = new Employee();
+        employee3.setFirstName("Andrzej");
+        employee3.setLastName("Sienkiewicz");
+        employee3.setSalary(10000);
 
-		session.getTransaction().commit();
+        session.beginTransaction();
 
-		factory.close();
-	}
+        session.save(employee);
+        session.save(employee2);
+        session.save(employee3);
+
+        session.getTransaction().commit();
+
+        factory.close();
+    }
 }
